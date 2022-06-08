@@ -1,4 +1,6 @@
-public class Student 
+package com.globalpayex.college.entities;
+
+public class StudentOld 
 {
 	//instance attributes
 	String name;
@@ -8,7 +10,7 @@ public class Student
 	
 	static int count;
 	
-	Student()
+	public StudentOld()
 	{
 		this("NA",'m',-1,0.0);
 		/*this.name="N/A";
@@ -17,21 +19,22 @@ public class Student
 		this.gender='m';*/
 	}
 	
-	Student(String name, char gender, int roll, double marks)
+	public StudentOld(String name, char gender, int roll, double marks)
 	{
 		this.name=name;
 		this.gender=gender;
 		this.marks=marks;
 		this.roll = roll;
-		++Student.count;	// also count++ can be used
+		++StudentOld.count;	// also count++ can be used
 	}
 	
-	String getDetails()
+	public String getDetails()
 	{
-		return "Name: "+this.name+"\n"+"Gender: "+this.gender+"\n"+"Roll.no.: "+this.roll+"\n"+"Marks: "+this.marks;
+		//return "Name: "+this.name+"\n"+"Gender: "+this.gender+"\n"+"Roll.no.: "+this.roll+"\n"+"Marks: "+this.marks;
+		return String.format("Name: %s\nGender: %s\nRoll: %s\nMarks %s", this.name,this.gender,this.roll,this.marks);
 	}
 	
-	String getGrade()
+	public String getGrade()
 	{
 		char grade;
 		if(this.marks >=70 && this.marks<100)
@@ -58,8 +61,8 @@ public class Student
 		return "Grade:"+grade;
 	}
 	
-	static Student newInstance(String name, char gender, int roll, double marks)
+	public static StudentOld newInstance(String name, char gender, int roll, double marks)
 	{
-		return new Student(name,gender,roll,marks);
+		return new StudentOld(name,gender,roll,marks);
 	}
 }

@@ -14,5 +14,4 @@ public class Professor extends CollegeUser
 		this.costPerDay = costPerDay;
 		this.workingDays = workingDays;
 	}
-	
 }

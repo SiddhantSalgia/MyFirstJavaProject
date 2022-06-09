@@ -21,8 +21,4 @@ public class CollegeUser
 		return String.format("Name: %s\nGender: %s",this.fullName,this.gender);
 	}
 
-	public double getPayPerDay() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 }

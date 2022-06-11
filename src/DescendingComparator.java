@@ -1,4 +1,4 @@
-import java.util.Comparator;
+/*import java.util.Comparator;
 
 public class DescendingComparator implements Comparator<Integer>
 {
@@ -8,4 +8,4 @@ public class DescendingComparator implements Comparator<Integer>
 	{
 		return o2.compareTo(o1);
 	}
-}
+}*/
